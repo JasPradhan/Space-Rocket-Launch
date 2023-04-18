@@ -1,0 +1,48 @@
+
+.context {
+  display: flex;
+  justify-content: center;
+  height: 60vh;
+  color: #feda4a;
+  font-size: 500%;
+  font-weight: 70%;
+  letter-spacing: 6px;
+  line-height: 150%;
+  perspective: 400px;
+  text-align: justify;
+}
+
+.crawl {
+  position: relative;
+  top: 9999px;
+  transform-origin: 50% 50%;
+  animation: crawl 60s linear;
+}
+
+
+.fading {
+  position: relative;
+  width: 100%;
+  min-height: 70vh;
+  background-image: linear-gradient(0deg, transparent, black 75%);
+  z-index: 1;
+  text-align: center;
+}
+
+
+
+@keyframes crawl {
+  0% {
+    top: 30px;
+    transform: rotateX(15deg)  translateZ(0);
+  }
+  100% { 
+    top: -6000px;
+    transform: rotateX(25deg) translateZ(-2500px);
+  }
+}
+
+
+body {
+  overflow: hidden;
+}
